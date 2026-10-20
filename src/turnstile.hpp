@@ -16,6 +16,22 @@ enum state_e : std::uint8_t {
   STOP,
 };
 
+// ==========================================================================
+// TODO: Exercício proposto:
+// ==========================================================================
+// Modifique o diagrama de estado para contemplar um novo estado:
+// WARNING_EXTRA_COIN.
+// ---
+// Esse estado deve ser alcançado se o estado atual for LOCKED e o usuário
+// inserir mais uma MOEDA (ação de entrada "coin" ou "c").
+// Então a FMS vai para o novo estado, o qual existe apenas para imprimir
+// uma mensagem para o usuário final, indicando que ele/ela inseriu uma
+// moeda a mais e, portanto, deve recebê-la de volta.
+// O estado WARNING_EXTRA_COIN passa, automaticamente, para o estado LOCKED
+// na próxima interação, depois que o usuário der um <ENTER>, sinalizando
+// que tomou ciência (visualizou) a mensagem de aviso.
+// ==========================================================================
+
 /// Possible user inputs.
 enum input_e : std::uint8_t {
   PUSH = 0,   //!< push the turnstile.
